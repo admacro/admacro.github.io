@@ -20,10 +20,10 @@ Install [[https://karabiner-elements.pqrs.org][Karabiner-elements]] (here is the
 This issue is similar to Issue-1, but instead happens to the layer switching key (aka the =Fn= key). =Fn= key combos don't work if the keys of the combo are not on the same keyboard. For example, with =Fn= configured to switching to layer 1 and with dvorak layout, =Fn= + =c= will not do what you have configured it to do. When you press a =Fn= key combo, the layer indicating LED is red on the =Fn= side and cyan on the =c= side which should've been red, too. (layer to LED color mapping: 0(default layer): cyan, 1: red, 2: green, 3: blue)
 
 *** Solution
-Install and setup [[https://pypi.org/project/dumang-ctrl/][Dumang-ctrl]] ([[dumang-ctrl-repo][github repo]]). Dumang-ctrl is a runnable script written in Python 3. It syncs the events between two Dumang DK6 keyboards. For example, when you press =Fn= on one board to switch to layer 1, the other board will also be switched to layer 1.
+Install and setup [[dumang-ctrl-pypi][Dumang-ctrl]] ([[dumang-ctrl-repo][github repo]]). Dumang-ctrl is a runnable script written in Python 3. It syncs the events between two Dumang DK6 keyboards. For example, when you press =Fn= on one board to switch to layer 1, the other board will also be switched to layer 1.
 1. Install [[https://brew.sh][Homebrew]]
 2. Setup Python3
-   1. Install Python3
+   1. Install Python3 ([[brew-python][homebrew python formula]])
        #+BEGIN_SRC sh
        brew install python # this installs python3 by default
        #+END_SRC
@@ -55,6 +55,8 @@ Killing and restarting the daemon will solve the problem. Since sleeping and wak
 3. Auto launch =dumang-sync= on system startup. Add the =dumang-sync= app to login item list so that you don't need to open it every time you login the system, though it's just one key combo away.
 
 #+LINK: dumang http://www.beyondq.com/%E8%B6%85%E9%85%B7%E7%A7%91%E6%8A%80-%E4%BA%A7%E5%93%81-%E6%AF%92%E8%9F%92%E9%94%AE%E7%9B%98-%E6%A8%A1%E5%9D%97%E5%8C%96%E9%94%AE%E7%9B%98-dk6-dumang.html
+#+LINK: dumang-ctrl-pypi https://pypi.org/project/dumang-ctrl/
 #+LINK: dumang-app http://www.beyondq.com/download.html
 #+LINK: dumang-ctrl-repo https://github.com/mayanez/dumang-keyboard-ctrl
+#+LINK: brew-python https://formulae.brew.sh/formula/python@3.9
 #+LINK: karabiner-installation https://karabiner-elements.pqrs.org/docs/getting-started/installation/
