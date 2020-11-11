@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-11-11 Wed 18:02 -->
+<!-- 2020-11-11 Wed 20:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dumang DK6 Keyboard</title>
@@ -252,20 +252,20 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#org92ce7c6">[Issue-1] Common key combos not working</a>
 <ul>
-<li><a href="#org1562252">Issue</a></li>
-<li><a href="#org85110ea">Solution</a></li>
+<li><a href="#orgf2c5ba0">Issue</a></li>
+<li><a href="#org2e859d9">Solution</a></li>
 </ul>
 </li>
 <li><a href="#org7d44860">[Issue-2] Layer switching key combos not working</a>
 <ul>
-<li><a href="#orga425e4b">Issue</a></li>
-<li><a href="#org48d7015">Solution</a></li>
+<li><a href="#org4adb745">Issue</a></li>
+<li><a href="#org5dae47e">Solution</a></li>
 </ul>
 </li>
 <li><a href="#org964ab59">[Issue-3] <code>dumang-sync</code> failed to resync on system wake up and keyboard reconnecting</a>
 <ul>
-<li><a href="#orgf2c5ba0">Issue</a></li>
-<li><a href="#org2e859d9">Solution</a></li>
+<li><a href="#org872383b">Issue</a></li>
+<li><a href="#org9a4f8b7">Solution</a></li>
 </ul>
 </li>
 </ul>
@@ -282,7 +282,7 @@ Product link: <a href="http://www.beyondq.com/%E8%B6%85%E9%85%B7%E7%A7%91%E6%8A%
 </p>
 
 <p>
-As of 20201110, the <a href="http://www.beyondq.com/download.html">Dumang app</a> only has a Windows version. You need a Windows system, either in a real machine or a virtual machine, to configure the keyboard. And on Windows, you will have no issue using two Dumang DK6 keyboards. Everything works perfectly out of box on Windows. But if you are on MacOS, three problems must be solved before you could make full use of two DK6 keyboards.
+As of 20201110, the <a href="http://www.beyondq.com/download.html">Dumang app</a> only has a Windows version. You'll need a Windows system, either in a real machine or a virtual machine, to configure the keyboard. And on Windows, you will have no issue using two Dumang DK6 keyboards. Everything works perfectly out of box on Windows. But if you are on MacOS, three problems must be solved before you could make full use of two DK6 keyboards.
 </p>
 
 <div id="outline-container-org5d33be7" class="outline-2">
@@ -293,18 +293,18 @@ As of 20201110, the <a href="http://www.beyondq.com/download.html">Dumang app</a
 <h3 id="org92ce7c6">[Issue-1] Common key combos not working</h3>
 <div class="outline-text-3" id="text-org92ce7c6">
 </div>
-<div id="outline-container-org1562252" class="outline-4">
-<h4 id="org1562252">Issue</h4>
-<div class="outline-text-4" id="text-org1562252">
+<div id="outline-container-orgf2c5ba0" class="outline-4">
+<h4 id="orgf2c5ba0">Issue</h4>
+<div class="outline-text-4" id="text-orgf2c5ba0">
 <p>
 Common key combos don't work if the keys of the combo are not on the same keyboard. For example, with dvorak layout, the following key combos will not work: <code>Left-Cmd</code> + <code>c</code>, <code>Left-Ctrl</code> + <code>d</code>, or <code>Left-Option</code> + <code>r</code>, because <code>c</code> <code>d</code> <code>r</code> are all on the right.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org85110ea" class="outline-4">
-<h4 id="org85110ea">Solution</h4>
-<div class="outline-text-4" id="text-org85110ea">
+<div id="outline-container-org2e859d9" class="outline-4">
+<h4 id="org2e859d9">Solution</h4>
+<div class="outline-text-4" id="text-org2e859d9">
 <p>
 Install <a href="https://karabiner-elements.pqrs.org">Karabiner-elements</a> (here is the <a href="https://karabiner-elements.pqrs.org/docs/getting-started/installation/">installation instruction</a>). Once the installation and setup is done, open the app and the issue will be gone. No further configuration is required. Add the app to login item list so that you don't need to open it every time you login the system.
 </p>
@@ -316,20 +316,20 @@ Install <a href="https://karabiner-elements.pqrs.org">Karabiner-elements</a> (he
 <h3 id="org7d44860">[Issue-2] Layer switching key combos not working</h3>
 <div class="outline-text-3" id="text-org7d44860">
 </div>
-<div id="outline-container-orga425e4b" class="outline-4">
-<h4 id="orga425e4b">Issue</h4>
-<div class="outline-text-4" id="text-orga425e4b">
+<div id="outline-container-org4adb745" class="outline-4">
+<h4 id="org4adb745">Issue</h4>
+<div class="outline-text-4" id="text-org4adb745">
 <p>
 This issue is similar to Issue-1, but instead happens to the layer switching key (aka the <code>Fn</code> key). <code>Fn</code> key combos don't work if the keys of the combo are not on the same keyboard. For example, with <code>Fn</code> configured to switching to layer 1 and with dvorak layout, <code>Fn</code> + <code>c</code> will not do what you have configured it to do. When you press a <code>Fn</code> key combo, the layer indicating LED is red on the <code>Fn</code> side and cyan on the <code>c</code> side which should've been red, too. (layer to LED color mapping: 0(default layer): cyan, 1: red, 2: green, 3: blue)
 </p>
 </div>
 </div>
 
-<div id="outline-container-org48d7015" class="outline-4">
-<h4 id="org48d7015">Solution</h4>
-<div class="outline-text-4" id="text-org48d7015">
+<div id="outline-container-org5dae47e" class="outline-4">
+<h4 id="org5dae47e">Solution</h4>
+<div class="outline-text-4" id="text-org5dae47e">
 <p>
-Install and setup <a href="https://pypi.org/project/dumang-ctrl/">Dumang-ctrl</a>. Dumang-ctrl is a runnable script written in Python 3. It syncs the events between two Dumang DK6 keyboards. For example, when you press <code>Fn</code> on one board to switch to layer 1, the other board will also be switched to layer 1.
+Install and setup <a href="https://pypi.org/project/dumang-ctrl/">Dumang-ctrl</a> (<a href="https://github.com/mayanez/dumang-keyboard-ctrl">github repo</a>). Dumang-ctrl is a runnable script written in Python 3. It syncs the events between two Dumang DK6 keyboards. For example, when you press <code>Fn</code> on one board to switch to layer 1, the other board will also be switched to layer 1.
 </p>
 <ol class="org-ol">
 <li>Install <a href="https://brew.sh">Homebrew</a></li>
@@ -370,18 +370,18 @@ pip install dumang-ctrl libusb1 libusb
 <h3 id="org964ab59">[Issue-3] <code>dumang-sync</code> failed to resync on system wake up and keyboard reconnecting</h3>
 <div class="outline-text-3" id="text-org964ab59">
 </div>
-<div id="outline-container-orgf2c5ba0" class="outline-4">
-<h4 id="orgf2c5ba0">Issue</h4>
-<div class="outline-text-4" id="text-orgf2c5ba0">
+<div id="outline-container-org872383b" class="outline-4">
+<h4 id="org872383b">Issue</h4>
+<div class="outline-text-4" id="text-org872383b">
 <p>
-When you do a fresh run of <code>dumang-sync</code>, everything works fine immediately. However, whenever MacOS wakes up from sleep, or you logout and login, or if you plug out and plug in the keyboards, it failed to resync. Checking the log, the script seemed to be trying to auto detect the hot plugging, yet it just failed to resync.
+When you do a fresh run of <code>dumang-sync</code>, it will run without any problem and the two keyboards will be synced. However, whenever MacOS wakes up from sleep, or you logout and login, or if you plug out and plug in the keyboards, it will fail to sync. From the log, I found that the script seemed to be trying to auto detect the hot plugging, yet it just failed to do so, for whatever reason.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2e859d9" class="outline-4">
-<h4 id="org2e859d9">Solution</h4>
-<div class="outline-text-4" id="text-org2e859d9">
+<div id="outline-container-org9a4f8b7" class="outline-4">
+<h4 id="org9a4f8b7">Solution</h4>
+<div class="outline-text-4" id="text-org9a4f8b7">
 <p>
 Killing and restarting the daemon will solve the problem. Since sleeping and waking up from sleep happens very often, there must be a way to quickly bring the daemon back to life. But to do it manually and frequently in terminal is counter-efficient, and keeping a terminal window open all the time running the daemon is cluttered. The best way is to just press one key or key combo and the daemon would get restarted. I came up with a solution by integrating Shell script, Automator, and QuickSilver.
 </p>
