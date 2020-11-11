@@ -20,7 +20,7 @@ Install [[https://karabiner-elements.pqrs.org][Karabiner-elements]] (here is the
 This issue is similar to Issue-1, but instead happens to the layer switching key (aka the =Fn= key). =Fn= key combos don't work if the keys of the combo are not on the same keyboard. For example, with =Fn= configured to switching to layer 1 and with dvorak layout, =Fn= + =c= will not do what you have configured it to do. When you press a =Fn= key combo, the layer indicating LED is red on the =Fn= side and cyan on the =c= side which should've been red, too. (layer to LED color mapping: 0(default layer): cyan, 1: red, 2: green, 3: blue)
 
 *** Solution
-Install and setup [[https://pypi.org/project/dumang-ctrl/][Dumang-ctrl]]. Dumang-ctrl is a runnable script written in Python 3. It syncs the events between two Dumang DK6 keyboards. For example, when you press =Fn= on one board to switch to layer 1, the other board will also be switched to layer 1.
+Install and setup [[https://pypi.org/project/dumang-ctrl/][Dumang-ctrl]] ([[dumang-ctrl-repo][github repo]]). Dumang-ctrl is a runnable script written in Python 3. It syncs the events between two Dumang DK6 keyboards. For example, when you press =Fn= on one board to switch to layer 1, the other board will also be switched to layer 1.
 1. Install [[https://brew.sh][Homebrew]]
 2. Setup Python3
    1. Install Python3
@@ -42,7 +42,7 @@ Install and setup [[https://pypi.org/project/dumang-ctrl/][Dumang-ctrl]]. Dumang
 
 ** [Issue-3] =dumang-sync= failed to resync on system wake up and keyboard reconnecting
 *** Issue
-When you do a fresh run of =dumang-sync=, everything works fine immediately. However, whenever MacOS wakes up from sleep, or you logout and login, or if you plug out and plug in the keyboards, it failed to resync. Checking the log, the script seemed to be trying to auto detect the hot plugging, yet it just failed to resync.
+When you do a fresh run of =dumang-sync=, it will run without any problem and the two keyboards will be synced. However, whenever MacOS wakes up from sleep, or you logout and login, or if you plug out and plug in the keyboards, it will fail to sync. From the log, I found that the script seemed to be trying to auto detect the hot plugging, yet it just failed to do so, for whatever reason.
 
 *** Solution
 Killing and restarting the daemon will solve the problem. Since sleeping and waking up from sleep happens very often, there must be a way to quickly bring the daemon back to life. But to do it manually and frequently in terminal is counter-efficient, and keeping a terminal window open all the time running the daemon is cluttered. The best way is to just press one key or key combo and the daemon would get restarted. I came up with a solution by integrating Shell script, Automator, and QuickSilver.
@@ -56,4 +56,5 @@ Killing and restarting the daemon will solve the problem. Since sleeping and wak
 
 #+LINK: dumang http://www.beyondq.com/%E8%B6%85%E9%85%B7%E7%A7%91%E6%8A%80-%E4%BA%A7%E5%93%81-%E6%AF%92%E8%9F%92%E9%94%AE%E7%9B%98-%E6%A8%A1%E5%9D%97%E5%8C%96%E9%94%AE%E7%9B%98-dk6-dumang.html
 #+LINK: dumang-app http://www.beyondq.com/download.html
+#+LINK: dumang-ctrl-repo https://github.com/mayanez/dumang-keyboard-ctrl
 #+LINK: karabiner-installation https://karabiner-elements.pqrs.org/docs/getting-started/installation/

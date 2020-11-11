@@ -227,6 +227,10 @@
 	    overflow: auto;
     }
 
+    pre.src {
+	    overflow: auto !important;
+    }
+
     .org-info-box {
 	    clear:both;
 	    margin-left:auto;
