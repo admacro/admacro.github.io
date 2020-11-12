@@ -1,3 +1,4 @@
+#+INCLUDE: ~/prog/org-macros/org-macros.setup
 # coding: utf-8
 #+TITLE: Dumang DK6 Keyboard
 
@@ -10,17 +11,17 @@ As of 20201110, the [[dumang-app][Dumang app]] only has a Windows version. You'l
 * Issues and Solutions on Mac
 ** [Issue-1] Common key combos not working
 *** Issue
-Common key combos don't work if the keys of the combo are not on the same keyboard. For example, with dvorak layout, the following key combos will not work: =Left-Cmd= + =c=, =Left-Ctrl= + =d=, or =Left-Option= + =r=, because =c= =d= =r= are all on the right.
+Common key combos don't work if the keys of the combo are not on the same keyboard. For example, with dvorak layout, the following key combos will not work: {{{kbd(Left Cmd)}}}+{{{kbd(c)}}}, {{{kbd(Left Ctrl)}}}+{{{kbd(d)}}}, or {{{kbd(Left Option)}}}+{{{kbd(r)}}}, because {{{kbd(c)}}} {{{kbd(d)}}} {{{kbd(r)}}} are all on the right.
 
 *** Solution
 Install [[https://karabiner-elements.pqrs.org][Karabiner-elements]] (here is the [[karabiner-installation][installation instruction]]). Once the installation and setup is done, open the app and the issue will be gone. No further configuration is required. Add the app to login item list so that you don't need to open it every time you login the system.
 
 ** [Issue-2] Layer switching key combos not working
 *** Issue
-This issue is similar to Issue-1, but instead happens to the layer switching key (aka the =Fn= key). =Fn= key combos don't work if the keys of the combo are not on the same keyboard. For example, with =Fn= configured to switching to layer 1 and with dvorak layout, =Fn= + =c= will not do what you have configured it to do. When you press a =Fn= key combo, the layer indicating LED is red on the =Fn= side and cyan on the =c= side which should've been red, too. (layer to LED color mapping: 0(default layer): cyan, 1: red, 2: green, 3: blue)
+This issue is similar to Issue-1, but instead happens to the layer switching key (aka the {{{kbd(Fn)}}} key). {{{kbd(Fn)}}} key combos don't work if the keys of the combo are not on the same keyboard. For example, with {{{kbd(Fn)}}} configured to switching to layer 1 and with dvorak layout, {{{kbd(Fn)}}}+{{{kbd(c)}}} will not do what you have configured it to do. When you press a {{{kbd(Fn)}}} key combo, the layer indicating LED is red on the {{{kbd(Fn)}}} side and cyan on the {{{kbd(c)}}} side which should've been red, too. (layer to LED color mapping: 0(default layer): cyan, 1: red, 2: green, 3: blue)
 
 *** Solution
-Install and setup [[dumang-ctrl-pypi][Dumang-ctrl]] ([[dumang-ctrl-repo][github repo]]). Dumang-ctrl is a runnable script written in Python 3. It syncs the events between two Dumang DK6 keyboards. For example, when you press =Fn= on one board to switch to layer 1, the other board will also be switched to layer 1.
+Install and setup [[dumang-ctrl-pypi][Dumang-ctrl]] ([[dumang-ctrl-repo][github repo]]). Dumang-ctrl is a runnable script written in Python 3. It syncs the events between two Dumang DK6 keyboards. For example, when you press {{{kbd(Fn)}}} on one board to switch to layer 1, the other board will also be switched to layer 1.
 1. Install [[https://brew.sh][Homebrew]]
 2. Setup Python3
    1. Install Python3 ([[brew-python][homebrew python formula]])
@@ -38,7 +39,7 @@ Install and setup [[dumang-ctrl-pypi][Dumang-ctrl]] ([[dumang-ctrl-repo][github 
        pip install dumang-ctrl libusb1 libusb
        #+END_SRC
 4. Run =dumang-sync= in terminal
-5. Press =Fn= on one keyboard, and the light on other board should now be red (layer 1).
+5. Press {{{kbd(Fn)}}} on one keyboard, and the light on other board should now be red (layer 1).
 
 ** [Issue-3] =dumang-sync= failed to resync on system wake up and keyboard reconnecting
 *** Issue
@@ -51,7 +52,7 @@ Killing and restarting the daemon will solve the problem. Since sleeping and wak
       pgrep -f dumang-sync | xargs kill
       /usr/local/bin/dumang-sync > /dev/null 2>&1 &
      #+END_SRC
-2. Install [[https://qsapp.com][QuickSilver]]. Add a trigger to open the app created above, and assign a shortcut to the trigger, for example, =Cmd= + =Home=. The key combo must not be a =Fn= combo as the daemon had already stopped working at the time. Now, you can just press =Cmd= + =Home= to bring the daemon back to life.
+2. Install [[https://qsapp.com][QuickSilver]]. Add a trigger to open the app created above, and assign a shortcut to the trigger, for example, {{{kbd(Cmd)}}}+{{{kbd(Home)}}}. The key combo must not be a {{{kbd(Fn)}}} combo as the daemon had already stopped working at the time. Now, you can just press {{{kbd(Cmd)}}}+{{{kbd(Home)}}} to bring the daemon back to life.
 3. Auto launch =dumang-sync= on system startup. Add the =dumang-sync= app to login item list so that you don't need to open it every time you login the system, though it's just one key combo away.
 
 #+LINK: dumang http://www.beyondq.com/%E8%B6%85%E9%85%B7%E7%A7%91%E6%8A%80-%E4%BA%A7%E5%93%81-%E6%AF%92%E8%9F%92%E9%94%AE%E7%9B%98-%E6%A8%A1%E5%9D%97%E5%8C%96%E9%94%AE%E7%9B%98-dk6-dumang.html
