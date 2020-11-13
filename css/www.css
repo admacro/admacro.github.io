@@ -245,6 +245,8 @@
 	    overflow: auto;
     }
 
+    pre.src:hover:before { display: none;}
+
     .org-info-box {
 	    clear:both;
 	    margin-left:auto;
