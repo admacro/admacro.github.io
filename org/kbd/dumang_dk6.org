@@ -3,7 +3,7 @@
 
 #+TITLE: Dumang DK6 Keyboard
 #+SUBTITLE: Issues and Solutions on Mac
-
+#+DATE: 2020-11-10
 Setup two Dumang DK6 keyboards to work on MacOS.
 
 Product link: [[dumang][Dumang DK6]] (Official website in Chinese)
