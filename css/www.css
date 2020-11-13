@@ -46,27 +46,27 @@
 
     #org-div-home-and-up{
 	    position: fixed;
-	    right: 0;
-	    top: 4em;
+	    left: 0;
+	    top: 0;
+        box-shadow: 0 0 1em #D0CFCE;
+	    border-bottom-right-radius: 1em;
+        background: #F0EFEE;
+        padding: 0.5em;
+        font-size: 0.9em;
+}
     }
 
     /* TOC inspired by http://jashkenas.github.com/coffee-script */
     #table-of-contents {
-	    margin-top: 70px;
 	    font-size: 0.9em;
 	    position: fixed;
-	    right: 0em;
-	    top: 0em;
+	    right: 0;
+	    top: 0;
 	    background: #F0EFEE;
 	    line-height: 120%;
 	    text-align: right;
-	    box-shadow: 0 0 1em #777777;
-	    /* -webkit-box-shadow: 0 0 1em #777777; */
-	    /* -moz-box-shadow: 0 0 1em #777777; */
-	    /* border-top-left-radius: 0.5em; */
+	    box-shadow: 0 0 1em #D0CFCE;
 	    border-bottom-left-radius: 1em;
-	    /* -moz-border-radius-bottomleft: 5px; */
-	    /* ensure doesn't flow off the screen when expanded */
 	    max-height: 80%;
         max-width: 40%;        
 	    overflow: auto;
@@ -74,9 +74,9 @@
 	}
     #table-of-contents h2 {
 	    font-size: 1em;
-	    max-width: 9em;
 	    border: 0;
 	    font-weight: normal;
+	    text-align: right;
 	    padding-left: 0.5em;
 	    padding-right: 0.5em;
 	    padding-top: 0.05em;
@@ -240,15 +240,9 @@
 	    font-family: monospace;
 	    color: #232323;
 	    font-size: 90%;
-	    background-color: #F0EFEE;
-	    padding: 0.5em 1em !important;
-	    border: 2px solid #D0CFCE;
-	    border-radius: 5px;
+	    padding: 0em !important;
+	    border: none !important;
 	    overflow: auto;
-    }
-
-    pre.src {
-	    overflow: auto !important;
     }
 
     .org-info-box {

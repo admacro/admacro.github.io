@@ -1,6 +1,8 @@
-#+INCLUDE: ~/prog/org-macros/org-macros.setup
 # coding: utf-8
+#+INCLUDE: ~/prog/config/emacs/org/level-1.org
+
 #+TITLE: Dumang DK6 Keyboard
+#+SUBTITLE: Issues and Solutions on Mac
 
 Setup two Dumang DK6 keyboards to work on MacOS.
 
