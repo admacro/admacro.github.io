@@ -44,7 +44,7 @@ Install and setup [[dumang-ctrl-pypi][Dumang-ctrl]] ([[dumang-ctrl-repo][github 
 4. Run =dumang-sync= in terminal
 5. Press {{{kbd(Fn)}}} on one keyboard, and the light on other board should now be red (layer 1).
 
-** [Issue-3] =dumang-sync= failed to resync on system wake up and keyboard reconnecting
+** [Issue-3] dumang-sync failed to resync on system wake up and keyboard reconnecting
 *** Issue
 When you do a fresh run of =dumang-sync=, it will run without any problem and the two keyboards will be synced. However, whenever MacOS wakes up from sleep, or you logout and login, or if you plug out and plug in the keyboards, it will fail to sync. From the log, I found that the script seemed to be trying to auto detect the hot plugging, yet it just failed to do so, for whatever reason.
 
