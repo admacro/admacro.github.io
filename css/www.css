@@ -205,6 +205,7 @@ kbd {
     color: #232323;
     display: inline-block;
     font-size: 0.9em;
+    font-family: sans-serif;
     height: 0.9em;
     line-height: 100%;
     margin-right: 1px;
