@@ -5,11 +5,11 @@
 #+SUBTITLE: Issues and Solutions on Mac
 #+DATE: 2020-11-10
 
-Dumang DK6 is a modular keyboard compatible with Cherry-MX switch (not with low profile). To see what the keyboard look like, see photos and my experience at [[xah-dumang][Xahlee's Dumang DK6 keyboard page]]. If you know Chinese, you can visit the official product page [[dumang][here]] for a lot more information.
+Dumang DK6 is a modular keyboard compatible with Cherry-MX switch (not with low profile). To see what the keyboard looks like, see photos and my experience at [[xah-dumang][Xahlee's Dumang DK6 keyboard page]]. If you know Chinese, you can visit the official product page [[dumang][here]] for a lot more information.
 
 As of 2020-11-14, the [[dumang-app][Dumang app]] that's used to configure the keyboard only supports Windows. You will need a Windows system, either in a real machine or a virtual machine, to do the configuration, such as key mapping, macro, and firmware update.
 
-The Dumang DK6 keyboard is a single piece USB keyboard. However, because of its small size (L:20cm, W:14cm), it's not possible to put on it all keys of a standard 104-key keyboard. Therefore, you need two of them to mount all the keys you normally see on a laptop. That means you need to connect two USB devices to one computer. The problem is different operating systems handle multiple keyboards differently. On Windows, everything works perfectly out of box. On Mac, three problems must be solved before you could make full use of two DK6 keyboards. This page describes how to make two Dumang DK6 keyboards to work on Mac.
+The Dumang DK6 keyboard is a single piece USB keyboard. However, because of its small size (L:20cm, W:14cm), it's not possible to put on it all keys of a standard 104-key keyboard. Therefore, you need two of them to mount all the keys you normally see on a laptop. That means you need to connect two USB devices to one computer. The problem is different operating systems handle multiple keyboards differently. On Windows, everything works perfectly out of the box. On Mac, three problems must be solved before you could make full use of two DK6 keyboards. This page describes how to make two Dumang DK6 keyboards to work on Mac.
 
 * Issues and Solutions on Mac
 ** [Issue-1] Common key combos not working
@@ -17,7 +17,7 @@ The Dumang DK6 keyboard is a single piece USB keyboard. However, because of its 
 Common key combos don't work if the keys of the combo are not on the same keyboard. For example, with dvorak layout, the following key combos will not work: {{{kbd(Left Cmd)}}}+{{{kbd(c)}}}, {{{kbd(Left Ctrl)}}}+{{{kbd(d)}}}, or {{{kbd(Left Option)}}}+{{{kbd(r)}}}, because {{{kbd(c)}}} {{{kbd(d)}}} {{{kbd(r)}}} are all on the right.
 
 *** Solution
-Install [[https://karabiner-elements.pqrs.org][Karabiner-elements]] (here is the [[karabiner-installation][installation instruction]]). Once the installation and setup is done, open the app and the issue will be gone. No further configuration is required. Add the app to login item list so that you don't need to open it every time you login the system.
+Install [[https://karabiner-elements.pqrs.org][Karabiner-elements]] (here is the [[karabiner-installation][installation instruction]]). Once the installation and setup is done, open the app and the issue will be gone. No further configuration is required. Add the app to login item list so that you don't need to open it every time you log in the system.
 
 ** [Issue-2] Layer switching key combos not working
 *** Issue
@@ -46,7 +46,7 @@ Install and setup [[dumang-ctrl-pypi][Dumang-ctrl]] ([[dumang-ctrl-repo][github 
 
 ** [Issue-3] dumang-sync failed to resync on system wake up and keyboard reconnecting
 *** Issue
-When you do a fresh run of =dumang-sync=, it will run without any problem and the two keyboards will be synced. However, whenever MacOS wakes up from sleep, or you logout and login, or if you plug out and plug in the keyboards, it will fail to sync. From the log, I found that the script seemed to be trying to auto detect the hot plugging, yet it just failed to do so, for whatever reason.
+When you do a fresh run of =dumang-sync=, it will run without any problem and the two keyboards will be synced. However, whenever MacOS wakes up from sleep, or you logout and login, or if you plug out and plug in the keyboards, it will fail to sync. From the log, I found that the script seemed to be trying to auto-detect the hot plugging, yet it just failed to do so, for whatever reason.
 
 *** Solution
 Killing and restarting the daemon will solve the problem. Since sleeping and waking up from sleep happens very often, there must be a way to quickly bring the daemon back to life. But to do it manually and frequently in terminal is counter-efficient, and keeping a terminal window open all the time running the daemon is cluttered. The best way is to just press one key or key combo and the daemon would get restarted. I came up with a solution by integrating Shell script, Automator, and QuickSilver.
@@ -56,7 +56,7 @@ Killing and restarting the daemon will solve the problem. Since sleeping and wak
       /usr/local/bin/dumang-sync > /dev/null 2>&1 &
      #+END_SRC
 2. Install [[https://qsapp.com][QuickSilver]]. Add a trigger to open the app created above, and assign a shortcut to the trigger, for example, {{{kbd(Cmd)}}}+{{{kbd(Home)}}}. The key combo must not be a {{{kbd(Fn)}}} combo as the daemon had already stopped working at the time. Now, you can just press {{{kbd(Cmd)}}}+{{{kbd(Home)}}} to bring the daemon back to life.
-3. Auto launch =dumang-sync= on system startup. Add the =dumang-sync= app to login item list so that you don't need to open it every time you login the system, though it's just one key combo away.
+3. Auto launch =dumang-sync= on system startup. Add the =dumang-sync= app to login item list so that you don't need to open it every time you log in the system, though it's just one key combo away.
 
 #+LINK: dumang http://www.beyondq.com/%E8%B6%85%E9%85%B7%E7%A7%91%E6%8A%80-%E4%BA%A7%E5%93%81-%E6%AF%92%E8%9F%92%E9%94%AE%E7%9B%98-%E6%A8%A1%E5%9D%97%E5%8C%96%E9%94%AE%E7%9B%98-dk6-dumang.html
 #+LINK: xah-dumang http://www.xahlee.info/kbd/dumang_dk6.html
