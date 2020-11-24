@@ -5,7 +5,7 @@
 #+SUBTITLE: Issues and Solutions on Mac
 #+DATE: 2020-11-10
 
-Dumang DK6 is a modular keyboard compatible with Cherry-MX switch. To see what the keyboard look like, see photos and my experience at [[xah-dumang][Xahlee's Dumang DK6 keyboard page]]. If you know Chinese, you can visit the official product page [[dumang][here]] for a lot more information.
+Dumang DK6 is a modular keyboard compatible with Cherry-MX switch (not with low profile). To see what the keyboard look like, see photos and my experience at [[xah-dumang][Xahlee's Dumang DK6 keyboard page]]. If you know Chinese, you can visit the official product page [[dumang][here]] for a lot more information.
 
 As of 2020-11-14, the [[dumang-app][Dumang app]] that's used to configure the keyboard only supports Windows. You will need a Windows system, either in a real machine or a virtual machine, to do the configuration, such as key mapping, macro, and firmware update.
 
