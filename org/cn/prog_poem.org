@@ -1,0 +1,10 @@
+# coding: utf-8
+#+INCLUDE: ~/prog/config/emacs/org/level-1.org
+
+#+TITLE: 编程
+#+DATE: 2021-03-01
+
+编程夜当午，
+汗滴键旁鼠。
+谁知屏中灿，
+码码皆辛苦。
