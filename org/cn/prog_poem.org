@@ -1,9 +1,13 @@
 # coding: utf-8
 #+INCLUDE: ~/prog/config/emacs/org/level-1.org
 
-#+TITLE: 编程
+#+HTML_HEAD_EXTRA: <style>div#content > p {text-align: center; font-family: kai; font-size: 200%; line-height: 150%;}</style>
+#+HTML_HEAD_EXTRA: <style>.title {font-family: kai; font-size: 200%; }</style>
+
+#+TITLE: 诗《编程》
 #+DATE: 2021-03-01
 
+编{{{nbsp}}}{{{nbsp}}}程{{{nbsp}}}{{{nbsp}}}\\
 编程夜当午，\\
 汗滴键旁鼠。\\
 谁知屏中灿，\\
