@@ -6,7 +6,7 @@
 <!-- 2021-03-01 Mon 11:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Dumang DK6 Keyboard</title>
+<title>编程</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="James Ni" />
 <style type="text/css">
@@ -247,170 +247,16 @@ for the JavaScript code in this tag.
  |
  <a accesskey="H" href="../index.html"> HOME </a>
 </div><div id="content">
-<h1 class="title">Dumang DK6 Keyboard
-<br />
-<span class="subtitle">Issues and Solutions on Mac</span>
-</h1>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#orga910f8f">Issues and Solutions on Mac</a>
-<ul>
-<li><a href="#orgbcfef5b">[Issue-1] Common key combos not working</a>
-<ul>
-<li><a href="#org5c79794">Issue</a></li>
-<li><a href="#org2a2ed64">Solution</a></li>
-</ul>
-</li>
-<li><a href="#orgf0bc63b">[Issue-2] Layer switching key combos not working</a>
-<ul>
-<li><a href="#org25140db">Issue</a></li>
-<li><a href="#org3218b8e">Solution</a></li>
-</ul>
-</li>
-<li><a href="#org6b56850">[Issue-3] dumang-sync failed to resync on system wake up and keyboard reconnecting</a>
-<ul>
-<li><a href="#org18177d4">Issue</a></li>
-<li><a href="#orgea351a3">Solution</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
+<h1 class="title">编程</h1>
 <p>
-Dumang DK6 is a modular keyboard compatible with Cherry-MX switch (not with low profile). To see what the keyboard looks like, see photos and my experience at <a href="http://www.xahlee.info/kbd/dumang_dk6.html">Xahlee's Dumang DK6 keyboard page</a>. If you know Chinese, you can visit the official product page <a href="http://www.beyondq.com/%E8%B6%85%E9%85%B7%E7%A7%91%E6%8A%80-%E4%BA%A7%E5%93%81-%E6%AF%92%E8%9F%92%E9%94%AE%E7%9B%98-%E6%A8%A1%E5%9D%97%E5%8C%96%E9%94%AE%E7%9B%98-dk6-dumang.html">here</a> for a lot more information.
+编程夜当午，<br />
+汗滴键旁鼠。<br />
+谁知屏中灿，<br />
+码码皆辛苦。
 </p>
-
-<p>
-As of 2020-11-14, the <a href="http://www.beyondq.com/download.html">Dumang app</a> that's used to configure the keyboard only supports Windows. You will need a Windows system, either in a real machine or a virtual machine, to do the configuration, such as key mapping, macro, and firmware update.
-</p>
-
-<p>
-The Dumang DK6 keyboard is a single piece USB keyboard. However, because of its small size (L:20cm, W:14cm), it's not possible to put on it all keys of a standard 104-key keyboard. Therefore, you need two of them to mount all the keys you normally see on a laptop. That means you need to connect two USB devices to one computer. The problem is different operating systems handle multiple keyboards differently. On Windows, everything works perfectly out of the box. On Mac, three problems must be solved before you could make full use of two DK6 keyboards. This page describes how to make two Dumang DK6 keyboards to work on Mac.
-</p>
-
-<div id="outline-container-orga910f8f" class="outline-2">
-<h2 id="orga910f8f">Issues and Solutions on Mac</h2>
-<div class="outline-text-2" id="text-orga910f8f">
-</div>
-<div id="outline-container-orgbcfef5b" class="outline-3">
-<h3 id="orgbcfef5b">[Issue-1] Common key combos not working</h3>
-<div class="outline-text-3" id="text-orgbcfef5b">
-</div>
-<div id="outline-container-org5c79794" class="outline-4">
-<h4 id="org5c79794">Issue</h4>
-<div class="outline-text-4" id="text-org5c79794">
-<p>
-Common key combos don't work if the keys of the combo are not on the same keyboard. For example, with dvorak layout, the following key combos will not work: <kbd>Left Cmd</kbd>+<kbd>c</kbd>, <kbd>Left Ctrl</kbd>+<kbd>d</kbd>, or <kbd>Left Option</kbd>+<kbd>r</kbd>, because <kbd>c</kbd> <kbd>d</kbd> <kbd>r</kbd> are all on the right.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org2a2ed64" class="outline-4">
-<h4 id="org2a2ed64">Solution</h4>
-<div class="outline-text-4" id="text-org2a2ed64">
-<p>
-Install <a href="https://karabiner-elements.pqrs.org">Karabiner-elements</a> (here is the <a href="https://karabiner-elements.pqrs.org/docs/getting-started/installation/">installation instruction</a>). Once the installation and setup is done, open the app and the issue will be gone. No further configuration is required. Add the app to login item list so that you don't need to open it every time you log in the system.
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgf0bc63b" class="outline-3">
-<h3 id="orgf0bc63b">[Issue-2] Layer switching key combos not working</h3>
-<div class="outline-text-3" id="text-orgf0bc63b">
-</div>
-<div id="outline-container-org25140db" class="outline-4">
-<h4 id="org25140db">Issue</h4>
-<div class="outline-text-4" id="text-org25140db">
-<p>
-This issue is similar to Issue-1, but instead happens to the layer switching key (aka the <kbd>Fn</kbd> key). <kbd>Fn</kbd> key combos don't work if the keys of the combo are not on the same keyboard. For example, with <kbd>Fn</kbd> configured to switching to layer 1 and with dvorak layout, <kbd>Fn</kbd>+<kbd>c</kbd> will not do what you have configured it to do. When you press a <kbd>Fn</kbd> key combo, the layer indicating LED is red on the <kbd>Fn</kbd> side and cyan on the <kbd>c</kbd> side which should've been red, too. (layer to LED color mapping: 0(default layer): cyan, 1: red, 2: green, 3: blue)
-</p>
-</div>
-</div>
-
-<div id="outline-container-org3218b8e" class="outline-4">
-<h4 id="org3218b8e">Solution</h4>
-<div class="outline-text-4" id="text-org3218b8e">
-<p>
-Install and setup <a href="https://pypi.org/project/dumang-ctrl/">Dumang-ctrl</a> (<a href="https://github.com/mayanez/dumang-keyboard-ctrl">github repo</a>). Dumang-ctrl is a runnable script written in Python 3. It syncs the events between two Dumang DK6 keyboards. For example, when you press <kbd>Fn</kbd> on one board to switch to layer 1, the other board will also be switched to layer 1.
-</p>
-<ol class="org-ol">
-<li>Install <a href="https://brew.sh">Homebrew</a></li>
-<li>Setup Python3
-<ol class="org-ol">
-<li><p>
-Install Python3 (<a href="https://formulae.brew.sh/formula/python@3.9">homebrew python formula</a>)
-</p>
-<div class="org-src-container">
-<pre class="src src-sh">brew install python <span style="color: #A8541C;"># </span><span style="color: #A8541C;">this installs python3 by default</span>
-</pre>
-</div></li>
-<li><p>
-Add python lib to <code>$PATH</code>
-</p>
-<div class="org-src-container">
-<pre class="src src-sh"><span style="color: #A8541C;"># </span><span style="color: #A8541C;">Setting PATH for homebrew Python</span>
-<span style="color: #3C5F89; font-weight: bold;">export</span> <span style="color: #232323;">PATH</span>=<span style="color: #1B9554;">"/usr/local/opt/python/libexec/bin:$PATH"</span>
-</pre>
-</div></li>
-</ol></li>
-<li><p>
-Install <code>dumang-ctrl</code> and its dependencies
-</p>
-<div class="org-src-container">
-<pre class="src src-sh">brew install libusb
-pip install dumang-ctrl libusb1 libusb
-</pre>
-</div></li>
-<li>Run <code>dumang-sync</code> in terminal</li>
-<li>Press <kbd>Fn</kbd> on one keyboard, and the light on other board should now be red (layer 1).</li>
-</ol>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org6b56850" class="outline-3">
-<h3 id="org6b56850">[Issue-3] dumang-sync failed to resync on system wake up and keyboard reconnecting</h3>
-<div class="outline-text-3" id="text-org6b56850">
-</div>
-<div id="outline-container-org18177d4" class="outline-4">
-<h4 id="org18177d4">Issue</h4>
-<div class="outline-text-4" id="text-org18177d4">
-<p>
-When you do a fresh run of <code>dumang-sync</code>, it will run without any problem and the two keyboards will be synced. However, whenever MacOS wakes up from sleep, or you logout and login, or if you plug out and plug in the keyboards, it will fail to sync. From the log, I found that the script seemed to be trying to auto-detect the hot plugging, yet it just failed to do so, for whatever reason.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgea351a3" class="outline-4">
-<h4 id="orgea351a3">Solution</h4>
-<div class="outline-text-4" id="text-orgea351a3">
-<p>
-Killing and restarting the daemon will solve the problem. Since sleeping and waking up from sleep happens very often, there must be a way to quickly bring the daemon back to life. But to do it manually and frequently in terminal is counter-efficient, and keeping a terminal window open all the time running the daemon is cluttered. The best way is to just press one key or key combo and the daemon would get restarted. I came up with a solution by integrating Shell script, Automator, and QuickSilver.
-</p>
-<ol class="org-ol">
-<li><p>
-Create an Automator application to run the following shell scipt to do auto killing and restarting. Save the application as <code>Dumang-Sync</code>.
-</p>
-<div class="org-src-container">
-<pre class="src src-sh">pgrep -f dumang-sync | xargs kill
-/usr/local/bin/dumang-sync &gt; /dev/null <span style="color: #1B9554;">2</span>&gt;&amp;<span style="color: #1B9554;">1</span> &amp;
-</pre>
-</div></li>
-<li>Install <a href="https://qsapp.com">QuickSilver</a>. Add a trigger to open the app created above, and assign a shortcut to the trigger, for example, <kbd>Cmd</kbd>+<kbd>Home</kbd>. The key combo must not be a <kbd>Fn</kbd> combo as the daemon had already stopped working at the time. Now, you can just press <kbd>Cmd</kbd>+<kbd>Home</kbd> to bring the daemon back to life.</li>
-<li>Auto launch <code>dumang-sync</code> on system startup. Add the <code>dumang-sync</code> app to login item list so that you don't need to open it every time you log in the system, though it's just one key combo away.</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div id="postamble" class="status">
-<p>By James Ni | Date: 2020-11-10 | Last Updated: 2020-11-24 Tue 19:55</p><p>© 2020 James Ni</p>
+<p>By James Ni | Date: 2021-03-01 | Last Updated: 2021-03-01 Mon 11:22</p><p>© 2020 James Ni</p>
 </div>
 </body>
 </html>

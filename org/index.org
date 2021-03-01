@@ -4,4 +4,4 @@
 #+DATE: 2020-11-14
 
 * [[file:kbd/dumang_dk6.org][Dumang DK6 Keyboard]]
-* [[file:cn/prog_poem.org][编程]]
+* [[file:cn/prog_poem.org][诗《编程》]]
